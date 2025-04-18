@@ -1,0 +1,27 @@
+{
+  "images": {
+    "sizes": [16, 32, 64, 96, 128, 256, 384, 512, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    "domains": ["fakestoreapi.com", "images.unsplash.com"],
+    "remotePatterns": [
+      {
+        "protocol": "https",
+        "hostname": "fakestoreapi.com"
+      },
+      {
+        "protocol": "https",
+        "hostname": "images.unsplash.com"
+      }
+    ]
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        }
+      ]
+    }
+  ]
+}
